@@ -1,0 +1,18 @@
+df <- as.data.frame(ggplot2::midwest)
+head(df)
+dim(df)
+summary(df)
+str(df)
+View(df)
+tail(df)
+df <- rename(df, total = poptotal, asian = popasian)
+str(df)
+df$asianrate <- df$asian / df$total
+hist(df$asianrate)
+avg <- mean(df$asianrate)
+df$asian_proportion <- ifelse(df$asianrate>=avg, "large", "small")
+df$asian_proportion
+str(df)
+tail(df)
+table(df$asian_proportion)
+qplot(df$asian_proportion)

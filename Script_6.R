@@ -1,0 +1,18 @@
+rm(list=ls())
+exam <- read.csv("csv_exam.csv")
+rm(exama)
+head(exam, 10)
+tail(exam,10)
+View(exam)
+dim(exam)
+str(exam)
+summary(exam)
+
+mpg <- as.data.frame(ggplot2::mpg)
+head(mpg, 5)
+View(mpg)
+dim(mpg)
+tail(mpg, 5)
+?mpg
+str(mpg)
+summary(mpg)
